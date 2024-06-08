@@ -13,7 +13,6 @@ header {
     text-align: center;
     border-bottom: 5px solid #DAA520; /* Or */
     position: relative;
-    height: 80px; /* Ajustement de la hauteur du header */
 }
 
 header img.logo {
@@ -164,5 +163,9 @@ footer {
 
     nav ul li {
         margin: 10px 0;
+    }
+
+    header img.logo {
+        height: 60%;
     }
 }
