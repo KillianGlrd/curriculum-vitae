@@ -6,6 +6,11 @@
     <title>Contactez Killian GOILARD</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        function showConfirmation() {
+            document.getElementById("confirmationMessage").style.display = "block";
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -28,12 +33,13 @@
                 <li>Téléphone : <a href="tel:+33651720044">0651720044</a></li>
             </ul>
             <h2>Formulaire de contact</h2>
-            <form class="contact-form">
+            <form class="contact-form" action="https://formspree.io/f/xvoejeka" method="POST" onsubmit="showConfirmation()">
                 <input type="text" name="name" placeholder="Votre nom" required>
                 <input type="email" name="email" placeholder="Votre email" required>
                 <textarea name="message" placeholder="Votre message" required></textarea>
                 <button type="submit">Envoyer</button>
             </form>
+            <p id="confirmationMessage" style="display:none; color: green;">Votre message a été envoyé avec succès !</p>
         </section>
     </main>
     <footer>
