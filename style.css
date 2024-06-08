@@ -16,13 +16,14 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2em;
     text-transform: uppercase;
 }
 
 header p {
     margin: 5px 0 15px;
     font-size: 1.2em;
+    font-style: italic;
 }
 
 nav ul {
@@ -34,17 +35,56 @@ nav ul {
 
 nav ul li {
     margin: 0 15px;
+    position: relative;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #8B0000;
     text-decoration: none;
     font-size: 1.1em;
-    transition: color 0.3s;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: color 0.3s, background-color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #DAA520; /* Or */
+    color: #fff;
+    background-color: #DAA520; /* Or */
+}
+
+/* Menu déroulant */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 0;
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    width: 200px;
+    margin: 0;
+}
+
+nav ul li ul li a {
+    padding: 10px;
+    border-radius: 0;
+    background-color: #8B0000;
+    color: #fff;
+}
+
+nav ul li ul li a:hover {
+    background-color: #DAA520; /* Or */
+    color: #fff;
 }
 
 main {
