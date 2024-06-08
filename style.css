@@ -18,12 +18,14 @@ header h1 {
     margin: 0;
     font-size: 2em;
     text-transform: uppercase;
+    animation: fadeInDown 1s ease-in-out;
 }
 
 header p {
     margin: 5px 0 15px;
     font-size: 1.2em;
     font-style: italic;
+    animation: fadeInUp 1s ease-in-out;
 }
 
 nav ul {
@@ -89,11 +91,13 @@ nav ul li ul li a:hover {
 
 main {
     padding: 40px 20px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 h2 {
     color: #8B0000; /* Rouge foncé */
     margin-bottom: 10px;
+    animation: fadeInLeft 1s ease-in-out;
 }
 
 section {
@@ -103,6 +107,7 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-left: 5px solid #DAA520; /* Or */
     border-radius: 8px;
+    animation: fadeInRight 1s ease-in-out;
 }
 
 footer {
@@ -111,6 +116,7 @@ footer {
     text-align: center;
     padding: 10px 0;
     border-top: 5px solid #DAA520; /* Or */
+    animation: fadeInUp 1s ease-in-out;
 }
 
 .contact-form {
@@ -121,6 +127,7 @@ footer {
     margin: 0 auto;
     border-left: 5px solid #DAA520; /* Or */
     border-radius: 8px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .contact-form input, .contact-form textarea {
@@ -165,6 +172,50 @@ footer {
     }
     to {
         opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
